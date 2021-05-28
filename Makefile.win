@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o FileSystemNode.o Directorio.o Archivo.o
-LINKOBJ  = main.o FileSystemNode.o Directorio.o Archivo.o
+OBJ      = main.o FileSystemNode.o Directorio.o Archivo.o CPP.o JPG.o PPT.o
+LINKOBJ  = main.o FileSystemNode.o Directorio.o Archivo.o CPP.o JPG.o PPT.o
 LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
@@ -35,3 +35,12 @@ Directorio.o: Directorio.cpp
 
 Archivo.o: Archivo.cpp
 	$(CPP) -c Archivo.cpp -o Archivo.o $(CXXFLAGS)
+
+CPP.o: CPP.cpp
+	$(CPP) -c CPP.cpp -o CPP.o $(CXXFLAGS)
+
+JPG.o: JPG.cpp
+	$(CPP) -c JPG.cpp -o JPG.o $(CXXFLAGS)
+
+PPT.o: PPT.cpp
+	$(CPP) -c PPT.cpp -o PPT.o $(CXXFLAGS)

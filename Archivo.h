@@ -7,6 +7,7 @@ class Archivo : public FileSystemNode{
 	
 	public:
 		Archivo();
+		Archivo(string, string, FileSystemNode* );
 		virtual string toString() = 0;
 };
 
