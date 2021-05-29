@@ -16,10 +16,12 @@ class Directorio : public FileSystemNode {
 		Directorio();
 		Directorio(string, string, FileSystemNode*);
 		vector <FileSystemNode* > GETarchivos();
+		string GETnombre();
 		void agregararchivo(FileSystemNode* );
 		void agregardirectorio(FileSystemNode* );
 		void imprimirdirectorio(int );
 		void buscarporstring(string );
+		virtual string toString();
 		~Directorio();
 };
 
