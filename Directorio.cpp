@@ -111,19 +111,37 @@ void Directorio :: buscarporstring(string busqueda){
 			actualcpp = dynamic_cast < CPP*> (archivos [c]);
 			if (actualcpp->toString() == busqueda){
 				v = true; 
-				actualcpp->toString();
+				cout << actualcpp->toString() <<endl;
+				cout << " -lineas de condigo: " << to_string(actualcpp->GETlineas())+""<<endl;
+				cout << " -errores: " << to_string(actualcpp->GETerrores())+""<<endl;
 			}
 		}else if (dynamic_cast < JPG*> (archivos [c])){
 			actualjpg = dynamic_cast < JPG*> (archivos [c]);
 			if (actualjpg->toString() == busqueda){
 				v = true; 
-				actualjpg->toString();
+				cout << actualjpg->toString() <<endl;
+			
+			cout << " -Resolucion: " << actualjpg->GETresolucion()  <<endl;
+			
+			cout << " -Largo: " << to_string(actualjpg->GETlargo()) <<endl;
+			
+			cout << " -Ancho: " << to_string(actualjpg->GETancho()) <<endl;
+			
+			cout << " -Flash: " << actualjpg->GETflash() <<endl; 
 			}
 		}else if (dynamic_cast < PPT*> (archivos [c])){
 			actualppt = dynamic_cast < PPT*> (archivos [c]);
 			if (actualppt->toString() == busqueda){
 				v = true; 
-				actualppt->toString();
+				cout << actualppt->toString() << endl;
+			
+			cout << " -Animaciones: " << actualppt->GETanimaciones() <<endl;
+			
+			cout << " -Slides: " << to_string(actualppt->GETslides()) <<endl;
+			
+			cout << " -Plantilla: " << to_string(actualppt->GETplantillas()) <<endl;
+			
+			cout << " -Titulo: " <<actualppt->GETtitulo() <<endl; 
 			}
 		}
 	}
