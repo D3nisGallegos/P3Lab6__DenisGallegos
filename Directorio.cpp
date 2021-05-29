@@ -103,8 +103,8 @@ void Directorio :: buscarporstring(string busqueda){
 		if (dynamic_cast < Directorio*> (archivos [c])){
 			actual = dynamic_cast < Directorio*> (archivos [c]);
 			if (actual->nombre == busqueda){
-				v = true; 
-				actual->imprimirdirectorio(0);
+				v = true;
+				cout << actual->toString()<<endl;
 			}
 			//actual->imprimirdirectorio(espacios + 1);
 		}else if (dynamic_cast < CPP*> (archivos [c])){

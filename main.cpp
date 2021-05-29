@@ -170,7 +170,7 @@ int main(int argc, char** argv) {
 				cout << "-------AGREGAR DIRECTORIO------" <<endl; 
 				cout << "Ingrese el autor del directorio: " <<endl; 
 				getline(cin, autor); 
-				cout << "Ingrese el nombre del titulo: " <<endl; 
+				cout << "Ingrese el nombre del directorio: " <<endl; 
 				getline(cin, titulo);
 				fs->GETroot()->agregardirectorio(new Directorio(titulo, autor, fs->GETroot()));
 				cout << "-------FINAL AGREGAR DIRECTORIO------" <<endl; 	
